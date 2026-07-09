@@ -3,299 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SPARKLEX HOME CARE — Purity in Every Wash</title>
+<title>SPARKLEX HOME CARE — Purity in Every Wash | A Brand of EXARISTE GROUP</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
+    --navy:#08182F;
+    --navy-2:#0E2647;
+    --navy-3:#123566;
+    --gold:#D4AF37;
+    --gold-soft:#F1DFA0;
     --blue:#0D6EFD;
-    --blue-deep:#0A4FC4;
     --green:#00A651;
     --aqua:#00C4CC;
-    --bg:#F8FAFC;
+    --bg:#F7F8FA;
     --ink:#1F2937;
     --ink-soft:#5B6472;
     --white:#FFFFFF;
-    --navy:#08182F;
-    --gold:#D4AF37;
     --radius:18px;
-    --shadow:0 20px 45px -22px rgba(13,110,253,0.28);
-    --maxw:1220px;
+    --maxw:1240px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Inter',sans-serif;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  h1,h2,h3,h4{
-    font-family:'Bricolage Grotesque',sans-serif;
-    margin:0;
-    letter-spacing:-0.01em;
-    color:var(--navy);
-  }
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;margin:0;letter-spacing:-0.01em;color:var(--navy);}
   p{margin:0;line-height:1.65;color:var(--ink-soft);}
   a{text-decoration:none;color:inherit;}
   img{max-width:100%;display:block;}
   ul{margin:0;padding:0;list-style:none;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
-  .eyebrow{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12.5px;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--blue);
-    display:flex;align-items:center;gap:10px;
-    margin-bottom:14px;
-    font-weight:500;
-  }
-  .eyebrow::before{
-    content:"";
-    width:22px;height:2px;
-    background:var(--green);
-    display:inline-block;
-  }
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:8px;
-    padding:15px 28px;
-    border-radius:100px;
-    font-weight:600;
-    font-size:15px;
-    cursor:pointer;
-    border:1.5px solid transparent;
-    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
-    white-space:nowrap;
-  }
-  .btn-primary{background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;box-shadow:var(--shadow);}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 24px 50px -20px rgba(13,110,253,0.45);}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:14px;font-weight:500;}
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--gold);display:inline-block;}
+  .eyebrow.on-light{color:var(--blue);}
+  .eyebrow.on-light::before{background:var(--green);}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 28px;border-radius:100px;font-weight:600;font-size:15px;cursor:pointer;border:1.5px solid transparent;transition:transform .25s ease, box-shadow .25s ease, background .25s ease;white-space:nowrap;}
+  .btn-gold{background:linear-gradient(135deg,var(--gold),#B8912A);color:var(--navy);box-shadow:0 20px 40px -18px rgba(212,175,55,0.55);}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 24px 48px -16px rgba(212,175,55,0.65);}
+  .btn-outline-light{background:transparent;color:#fff;border-color:rgba(255,255,255,0.35);}
+  .btn-outline-light:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
   .btn-ghost{background:#fff;color:var(--navy);border-color:#E1E7EF;}
-  .btn-ghost:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px);}
-  .btn-gold{background:transparent;color:var(--gold);border-color:rgba(212,175,55,0.5);}
-  .btn-gold:hover{background:var(--gold);color:var(--navy);}
+  .btn-ghost:hover{border-color:var(--navy);transform:translateY(-2px);}
+  .btn-primary{background:linear-gradient(135deg,var(--blue),#0A4FC4);color:#fff;box-shadow:0 20px 40px -18px rgba(13,110,253,0.4);}
+  .btn-primary:hover{transform:translateY(-2px);}
+
+  /* ===== Top utility bar ===== */
+  .topbar{background:var(--navy);color:rgba(255,255,255,0.65);font-size:12.5px;padding:8px 0;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+  .topbar a{color:rgba(255,255,255,0.65);}
+  .topbar a:hover{color:var(--gold);}
+  .topbar .tb-left{display:flex;gap:20px;flex-wrap:wrap;}
+  .topbar .tb-right{font-family:'IBM Plex Mono',monospace;letter-spacing:.05em;color:var(--gold);font-size:11px;}
 
   /* ===== Header ===== */
-  header{
-    position:sticky;top:0;z-index:200;
-    background:rgba(248,250,252,0.86);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(13,110,253,0.08);
-  }
-  .nav{
-    max-width:var(--maxw);margin:0 auto;padding:14px 32px;
-    display:flex;align-items:center;justify-content:space-between;gap:24px;
-  }
+  header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.92);backdrop-filter:blur(14px);border-bottom:1px solid #EAECEF;}
+  .nav{max-width:var(--maxw);margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
   .brand{display:flex;align-items:center;gap:10px;}
   .brand img{height:40px;width:40px;border-radius:12px;}
   .brand-text{display:flex;flex-direction:column;line-height:1.1;}
   .brand-text b{font-family:'Bricolage Grotesque',sans-serif;font-size:18px;color:var(--navy);letter-spacing:-0.02em;}
   .brand-text span{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.16em;color:var(--green);text-transform:uppercase;}
-  .nav-links{display:flex;align-items:center;gap:30px;}
+  .nav-links{display:flex;align-items:center;gap:28px;}
   .nav-links a{font-size:14.5px;font-weight:500;color:var(--ink);position:relative;padding:6px 0;}
-  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--blue);transition:width .25s ease;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold);transition:width .25s ease;}
   .nav-links a:hover::after{width:100%;}
   .nav-right{display:flex;align-items:center;gap:14px;}
-  .lang-switch{
-    font-family:'IBM Plex Mono',monospace;font-size:12px;
-    display:flex;border:1px solid #E1E7EF;border-radius:100px;overflow:hidden;
-  }
-  .lang-switch span{padding:7px 12px;cursor:pointer;color:var(--ink-soft);}
-  .lang-switch span.active{background:var(--blue);color:#fff;}
   .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
   .burger span{width:24px;height:2px;background:var(--navy);border-radius:2px;}
 
-  /* ===== Hero ===== */
-  .hero{
-    position:relative;
-    padding:80px 0 40px;
-    overflow:hidden;
-  }
-  .ripple{
-    position:absolute;border-radius:50%;
-    border:1px solid rgba(13,110,253,0.14);
-    pointer-events:none;
-  }
-  .hero-grid{
-    display:grid;grid-template-columns:1.05fr 0.95fr;gap:40px;align-items:center;
-    position:relative;z-index:2;
-  }
-  .hero h1{
-    font-size:clamp(38px,5vw,64px);
-    font-weight:700;
-    line-height:1.03;
-    margin-bottom:22px;
-  }
-  .hero h1 em{
-    font-style:normal;
-    background:linear-gradient(100deg,var(--blue),var(--green) 60%, var(--aqua));
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-  }
-  .hero p.lead{font-size:18px;max-width:460px;margin-bottom:32px;}
-  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;}
-  .hero-stats{display:flex;gap:34px;flex-wrap:wrap;}
-  .hero-stats div b{font-family:'Bricolage Grotesque',sans-serif;font-size:26px;color:var(--navy);display:block;}
-  .hero-stats div span{font-size:12.5px;color:var(--ink-soft);}
+  /* ===== Marquee ticker ===== */
+  .ticker{background:var(--navy-2);border-bottom:1px solid rgba(212,175,55,0.18);overflow:hidden;white-space:nowrap;padding:10px 0;}
+  .ticker-track{display:inline-flex;animation:scrollTicker 32s linear infinite;}
+  .ticker-track span{color:rgba(255,255,255,0.75);font-size:13px;padding:0 28px;font-family:'IBM Plex Mono',monospace;letter-spacing:.02em;}
+  .ticker-track span b{color:var(--gold);}
+  @keyframes scrollTicker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+  /* ===== Hero (dark, premium) ===== */
+  .hero{position:relative;background:radial-gradient(ellipse at 20% -10%, #123566 0%, var(--navy) 55%), var(--navy);padding:90px 0 60px;overflow:hidden;}
+  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 82% 18%, rgba(212,175,55,0.14), transparent 45%), radial-gradient(circle at 90% 70%, rgba(0,196,204,0.10), transparent 40%);pointer-events:none;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:40px;align-items:center;position:relative;z-index:2;}
+  .hero h1{font-size:clamp(38px,5vw,60px);font-weight:700;line-height:1.05;margin-bottom:22px;color:#fff;}
+  .hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--gold),#F5E7B8 60%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .hero p.lead{font-size:17.5px;max-width:460px;margin-bottom:32px;color:rgba(255,255,255,0.7);}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
   .hero-visual{position:relative;display:flex;justify-content:center;align-items:center;}
-  .hero-visual .disc{
-    position:absolute;width:400px;height:400px;border-radius:50%;
-    background:radial-gradient(circle at 35% 30%, rgba(13,110,253,0.16), rgba(0,196,204,0.06) 60%, transparent 72%);
-  }
-  .hero-visual img{
-    position:relative;z-index:2;width:78%;
-    filter:drop-shadow(0 35px 45px rgba(13,110,253,0.25));
-    animation:float 6s ease-in-out infinite;
-  }
+  .hero-visual .disc{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle at 35% 30%, rgba(212,175,55,0.16), rgba(0,196,204,0.06) 60%, transparent 72%);}
+  .hero-visual img{position:relative;z-index:2;width:74%;filter:drop-shadow(0 35px 45px rgba(0,0,0,0.45));animation:float 6s ease-in-out infinite;}
   @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
-  .droplet-badge{
-    position:absolute;bottom:6%;left:6%;background:#fff;padding:12px 18px;border-radius:14px;
-    box-shadow:0 20px 40px -18px rgba(13,110,253,0.35);
-    display:flex;align-items:center;gap:10px;z-index:3;
-  }
-  .droplet-badge .dot{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--aqua));display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;}
+  .droplet-badge{position:absolute;bottom:6%;left:2%;background:#fff;padding:12px 18px;border-radius:14px;box-shadow:0 20px 40px -18px rgba(0,0,0,0.4);display:flex;align-items:center;gap:10px;z-index:3;}
+  .droplet-badge .dot{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#B8912A);display:flex;align-items:center;justify-content:center;color:var(--navy);font-size:16px;}
   .droplet-badge b{font-size:13px;display:block;color:var(--navy);}
   .droplet-badge span{font-size:11px;color:var(--ink-soft);}
 
-  .wave{display:block;width:100%;height:auto;margin-top:-2px;}
+  /* hero stat strip */
+  .stat-strip{position:relative;z-index:2;margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.1);border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);}
+  .stat-item{background:rgba(255,255,255,0.03);padding:26px 20px;text-align:center;}
+  .stat-item b{font-family:'Bricolage Grotesque',sans-serif;font-size:28px;color:var(--gold);display:block;}
+  .stat-item span{font-size:12px;color:rgba(255,255,255,0.6);}
 
-  section{padding:96px 0;position:relative;}
+  section{padding:100px 0;position:relative;}
   .section-head{max-width:640px;margin-bottom:56px;}
   .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
   .section-head h2{font-size:clamp(30px,3.4vw,42px);line-height:1.12;}
   .section-head p{margin-top:16px;font-size:16.5px;}
+  .section-head.on-dark h2{color:#fff;}
+  .section-head.on-dark p{color:rgba(255,255,255,0.62);}
 
   /* ===== About ===== */
   .about{background:#fff;}
-  .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:start;}
-  .about-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-  .about-card{
-    background:var(--bg);border-radius:var(--radius);padding:26px;
-    border:1px solid #EAF0F7;
-  }
-  .about-card .icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:16px;}
-  .about-card:nth-child(1) .icon{background:rgba(13,110,253,0.1);color:var(--blue);}
-  .about-card:nth-child(2) .icon{background:rgba(0,166,81,0.1);color:var(--green);}
-  .about-card h4{font-size:16px;margin-bottom:8px;}
-  .about-card p{font-size:14.5px;}
-  .highlight-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
-  .chip{
-    font-size:13px;font-weight:500;padding:9px 16px;border-radius:100px;
-    background:var(--bg);border:1px solid #E1E7EF;color:var(--ink);
-    display:flex;align-items:center;gap:8px;
-  }
-  .chip::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--aqua);}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .about-frame{background:linear-gradient(160deg,var(--navy),var(--navy-3));border-radius:28px;padding:50px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;}
+  .about-frame img{width:130px;}
+  .about-frame .quote{font-family:'Bricolage Grotesque',sans-serif;font-size:19px;color:#fff;line-height:1.4;}
+  .about-frame .quote b{color:var(--gold);}
+  .mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px;}
+  .mv-card{background:var(--bg);border:1px solid #EAECEF;border-radius:16px;padding:26px;}
+  .mv-card .ic{font-size:24px;margin-bottom:12px;}
+  .mv-card h4{font-size:16px;margin-bottom:8px;}
+  .mv-card p{font-size:14px;}
 
-  /* ===== Products ===== */
+  /* ===== Why (dark numbered core-values style) ===== */
+  .why{background:var(--navy);}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.08);border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);}
+  .why-item{background:rgba(255,255,255,0.02);padding:34px 26px;display:flex;flex-direction:column;gap:12px;transition:background .25s ease;}
+  .why-item:hover{background:rgba(212,175,55,0.07);}
+  .why-item .num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold);}
+  .why-item .ic{font-size:24px;}
+  .why-item h4{font-size:16px;color:#fff;}
+  .why-item p{font-size:13.5px;color:rgba(255,255,255,0.55);}
+
+  /* ===== Solutions (clean icon-card grid) ===== */
+  .solutions{background:#fff;}
+  .sol-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .sol-item{background:var(--bg);border:1px solid #EAECEF;border-radius:16px;padding:28px 22px;text-align:center;transition:transform .25s ease, box-shadow .25s ease;}
+  .sol-item:hover{transform:translateY(-6px);box-shadow:0 24px 45px -26px rgba(8,24,47,0.25);}
+  .sol-item .ic{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--navy-3));color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 16px;}
+  .sol-item h4{font-size:15.5px;margin-bottom:4px;}
+  .sol-item span{font-size:12px;color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;}
+
+  /* ===== Products (brand-card style) ===== */
   .products{background:var(--bg);}
   .cat-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px;}
-  .cat-tab{
-    font-size:13.5px;font-weight:600;padding:10px 18px;border-radius:100px;
-    background:#fff;border:1px solid #E1E7EF;color:var(--ink-soft);
-  }
+  .cat-tab{font-size:13.5px;font-weight:600;padding:10px 18px;border-radius:100px;background:#fff;border:1px solid #E1E7EF;color:var(--ink-soft);}
   .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
-  .product-card{
-    background:#fff;border-radius:22px;overflow:hidden;
-    border:1px solid #EAF0F7;
-    transition:transform .3s ease, box-shadow .3s ease;
-    display:flex;flex-direction:column;
-  }
-  .product-card:hover{transform:translateY(-8px);box-shadow:0 30px 55px -28px rgba(13,110,253,0.35);}
-  .product-media{aspect-ratio:1/0.82;overflow:hidden;background:#eef3f9;position:relative;}
+  .product-card{background:#fff;border-radius:22px;overflow:hidden;border:1px solid #EAECEF;transition:transform .3s ease, box-shadow .3s ease;display:flex;flex-direction:column;}
+  .product-card:hover{transform:translateY(-8px);box-shadow:0 30px 55px -28px rgba(8,24,47,0.3);}
+  .product-media{aspect-ratio:1/0.82;overflow:hidden;background:#eef1f5;position:relative;}
   .product-media img{width:100%;height:100%;object-fit:cover;object-position:top;}
-  .product-tag{
-    position:absolute;top:14px;left:14px;background:rgba(8,24,47,0.82);color:#fff;
-    font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.08em;
-    padding:6px 11px;border-radius:100px;text-transform:uppercase;
-  }
+  .product-tag{position:absolute;top:14px;left:14px;background:rgba(8,24,47,0.85);color:var(--gold);font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.08em;padding:6px 11px;border-radius:100px;text-transform:uppercase;}
   .product-body{padding:22px 22px 26px;flex:1;display:flex;flex-direction:column;}
   .product-body h4{font-size:19px;margin-bottom:6px;}
+  .product-body .tagline{font-style:italic;font-size:13.5px;color:var(--blue);margin-bottom:10px;}
   .product-body p{font-size:14px;margin-bottom:16px;flex:1;}
-  .product-body .plink{font-size:13.5px;font-weight:600;color:var(--blue);display:inline-flex;align-items:center;gap:6px;}
+  .product-body .plink{font-size:13px;font-weight:700;color:var(--navy);display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:uppercase;}
+  .product-body .plink:hover{color:var(--gold);}
 
-  /* ===== Why ===== */
-  .why{background:#fff;}
-  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#EAF0F7;border-radius:22px;overflow:hidden;border:1px solid #EAF0F7;}
-  .why-item{background:#fff;padding:34px 26px;display:flex;flex-direction:column;gap:14px;transition:background .25s ease;}
-  .why-item:hover{background:linear-gradient(160deg,#fff, #EFF6FF);}
-  .why-item .num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--aqua);}
-  .why-item .ic{font-size:26px;}
-  .why-item h4{font-size:16px;}
-  .why-item p{font-size:13.5px;}
-
-  /* ===== Solutions ===== */
-  .solutions{background:var(--bg);}
-  .sol-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-  .sol-tile{
-    padding:28px 20px;border-radius:18px;color:#fff;position:relative;overflow:hidden;
-    min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;
-  }
-  .sol-tile .ic{font-size:24px;position:absolute;top:20px;left:20px;opacity:0.9;}
-  .sol-tile h4{color:#fff;font-size:16.5px;}
-  .sol-tile span{font-size:12px;color:rgba(255,255,255,0.75);font-family:'IBM Plex Mono',monospace;letter-spacing:0.04em;}
-
-  /* ===== Distributor ===== */
-  .distributor{
-    background:linear-gradient(120deg,var(--navy),#0E2647 65%, #0A2E52);
-    color:#fff;border-radius:32px;max-width:calc(var(--maxw) - 64px);margin:0 auto;
-    padding:64px;
-  }
-  .distributor .section-head h2{color:#fff;}
-  .distributor .section-head p{color:rgba(255,255,255,0.72);}
+  /* ===== Distributor (dark gold CTA) ===== */
+  .distributor{background:linear-gradient(120deg,var(--navy),var(--navy-2) 65%, var(--navy-3));border-radius:32px;max-width:calc(var(--maxw) - 64px);margin:0 auto;padding:64px;}
   .dist-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:center;}
   .dist-benefits{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
-  .dist-benefit{
-    background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);
-    border-radius:14px;padding:18px 20px;font-size:14px;display:flex;gap:10px;align-items:flex-start;
-  }
+  .dist-benefit{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:18px 20px;font-size:14px;color:rgba(255,255,255,0.8);display:flex;gap:10px;align-items:flex-start;}
   .dist-benefit .gd{color:var(--gold);font-size:16px;}
-  .dist-card{
-    background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.14);
-    border-radius:22px;padding:32px;backdrop-filter:blur(6px);
-  }
+  .dist-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.14);border-radius:22px;padding:32px;backdrop-filter:blur(6px);}
   .dist-card h3{color:#fff;font-size:22px;margin-bottom:6px;}
-  .dist-card p.small{color:rgba(255,255,255,0.68);font-size:14px;margin-bottom:22px;}
-  .dist-card .btn-primary{width:100%;}
+  .dist-card p.small{color:rgba(255,255,255,0.62);font-size:14px;margin-bottom:22px;}
+  .dist-card .btn-gold{width:100%;}
 
   /* ===== Clients ===== */
   .clients{background:#fff;}
   .client-row{display:flex;flex-wrap:wrap;gap:14px;}
-  .client-pill{
-    flex:1 1 150px;text-align:center;padding:26px 14px;border-radius:16px;
-    background:var(--bg);border:1px solid #EAF0F7;font-weight:600;font-size:14.5px;color:var(--navy);
-  }
+  .client-pill{flex:1 1 150px;text-align:center;padding:26px 14px;border-radius:16px;background:var(--bg);border:1px solid #EAECEF;font-weight:600;font-size:14.5px;color:var(--navy);}
   .client-pill .ic{font-size:26px;display:block;margin-bottom:10px;}
 
-  /* ===== Sustainability ===== */
-  .sustain{background:linear-gradient(180deg,#EAF7EF, var(--bg));}
-  .sustain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-  .sustain-item{background:#fff;border-radius:18px;padding:28px 22px;border:1px solid #E3F2E8;}
-  .sustain-item .ic{width:44px;height:44px;border-radius:12px;background:rgba(0,166,81,0.12);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;}
-  .sustain-item h4{font-size:16px;margin-bottom:8px;}
-  .sustain-item p{font-size:13.5px;}
+  /* ===== Trust (Built on Trust equivalent) ===== */
+  .trust{background:var(--bg);}
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .trust-item{background:#fff;border-radius:18px;padding:28px 22px;border:1px solid #EAECEF;}
+  .trust-item .ic{width:44px;height:44px;border-radius:12px;background:rgba(212,175,55,0.12);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;}
+  .trust-item h4{font-size:16px;margin-bottom:8px;}
+  .trust-item p{font-size:13.5px;}
+  .trust-stats{margin-top:44px;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#EAECEF;border-radius:18px;overflow:hidden;border:1px solid #EAECEF;}
+  .trust-stats div{background:#fff;padding:24px 12px;text-align:center;}
+  .trust-stats div b{font-family:'Bricolage Grotesque',sans-serif;font-size:24px;color:var(--navy);display:block;}
+  .trust-stats div span{font-size:11.5px;color:var(--ink-soft);}
 
   /* ===== Testimonials ===== */
   .testi{background:#fff;}
   .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  .testi-card{background:var(--bg);border:1px solid #EAF0F7;border-radius:20px;padding:28px;}
-  .stars{color:#F5A623;font-size:14px;margin-bottom:14px;letter-spacing:2px;}
+  .testi-card{background:var(--bg);border:1px solid #EAECEF;border-radius:20px;padding:28px;}
+  .stars{color:var(--gold);font-size:14px;margin-bottom:14px;letter-spacing:2px;}
   .testi-card p{font-size:14.5px;color:var(--ink);margin-bottom:20px;}
   .testi-person{display:flex;align-items:center;gap:12px;}
-  .avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--aqua));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;}
+  .avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-3));color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px;}
   .testi-person b{font-size:13.5px;display:block;color:var(--navy);}
   .testi-person span{font-size:12px;color:var(--ink-soft);}
 
   /* ===== FAQ ===== */
   .faq{background:var(--bg);}
   .faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
-  details{background:#fff;border:1px solid #EAF0F7;border-radius:14px;padding:6px 22px;}
-  summary{
-    cursor:pointer;padding:16px 0;font-weight:600;font-size:15.5px;color:var(--navy);
-    display:flex;justify-content:space-between;align-items:center;list-style:none;
-  }
+  details{background:#fff;border:1px solid #EAECEF;border-radius:14px;padding:6px 22px;}
+  summary{cursor:pointer;padding:16px 0;font-weight:600;font-size:15.5px;color:var(--navy);display:flex;justify-content:space-between;align-items:center;list-style:none;}
   summary::-webkit-details-marker{display:none;}
-  summary::after{content:"+";font-size:20px;color:var(--blue);font-weight:400;}
+  summary::after{content:"+";font-size:20px;color:var(--gold);font-weight:400;}
   details[open] summary::after{content:"–";}
   details p{padding-bottom:18px;font-size:14.5px;}
 
@@ -303,19 +211,16 @@
   .contact{background:#fff;}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
   .contact-info{display:flex;flex-direction:column;gap:16px;}
-  .info-row{display:flex;gap:14px;align-items:flex-start;background:var(--bg);border:1px solid #EAF0F7;border-radius:14px;padding:18px 20px;}
-  .info-row .ic{width:36px;height:36px;border-radius:10px;background:rgba(13,110,253,0.1);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+  .info-row{display:flex;gap:14px;align-items:flex-start;background:var(--bg);border:1px solid #EAECEF;border-radius:14px;padding:18px 20px;}
+  .info-row .ic{width:36px;height:36px;border-radius:10px;background:rgba(212,175,55,0.14);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
   .info-row b{font-size:13.5px;display:block;color:var(--navy);}
   .info-row span{font-size:13.5px;color:var(--ink-soft);}
-  .map-box{margin-top:6px;border-radius:14px;overflow:hidden;border:1px solid #EAF0F7;height:190px;}
+  .map-box{margin-top:6px;border-radius:14px;overflow:hidden;border:1px solid #EAECEF;height:190px;}
   .map-box iframe{width:100%;height:100%;border:0;}
   form{display:flex;flex-direction:column;gap:14px;}
   .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  input,textarea{
-    width:100%;padding:14px 16px;border-radius:12px;border:1px solid #E1E7EF;
-    font-family:'Inter',sans-serif;font-size:14.5px;background:var(--bg);color:var(--ink);
-  }
-  input:focus,textarea:focus{outline:2px solid var(--blue);outline-offset:1px;background:#fff;}
+  input,textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid #E1E7EF;font-family:'Inter',sans-serif;font-size:14.5px;background:var(--bg);color:var(--ink);}
+  input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px;background:#fff;}
   textarea{resize:vertical;min-height:110px;}
 
   /* ===== Footer ===== */
@@ -323,26 +228,15 @@
   .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,0.1);}
   .footer-brand .brand-text b{color:#fff;}
   .footer-brand p{color:rgba(255,255,255,0.6);font-size:14px;margin:16px 0 18px;max-width:280px;}
-  .footer-brand .of-badge{
-    display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--gold);
-    border:1px solid rgba(212,175,55,0.4);padding:7px 14px;border-radius:100px;margin-bottom:20px;
-    font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;
-  }
+  .footer-brand .of-badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--gold);border:1px solid rgba(212,175,55,0.4);padding:7px 14px;border-radius:100px;margin-bottom:20px;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;}
   .social-row{display:flex;gap:10px;}
-  .social-row a{
-    width:36px;height:36px;border-radius:10px;border:1px solid rgba(255,255,255,0.15);
-    display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;
-    transition:all .25s ease;
-  }
+  .social-row a{width:36px;height:36px;border-radius:10px;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;transition:all .25s ease;}
   .social-row a:hover{background:var(--gold);color:var(--navy);border-color:var(--gold);}
   footer h5{color:var(--gold);font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:20px;font-weight:500;}
   footer ul li{margin-bottom:12px;font-size:14px;}
   footer ul li a:hover{color:var(--gold);}
   .footer-contact li{display:flex;gap:10px;font-size:13.5px;align-items:flex-start;}
-  .bottom-bar{
-    padding:24px 0 30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
-    font-size:13px;color:rgba(255,255,255,0.5);
-  }
+  .bottom-bar{padding:24px 0 30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:rgba(255,255,255,0.5);}
   .bottom-bar a{color:rgba(255,255,255,0.5);}
   .bottom-bar a:hover{color:var(--gold);}
   .bottom-links{display:flex;gap:18px;flex-wrap:wrap;}
@@ -351,33 +245,32 @@
   [data-reveal].in{opacity:1;transform:translateY(0);}
 
   @media(max-width:980px){
-    .nav-links,.nav-right .lang-switch{display:none;}
+    .nav-links{display:none;}
     .burger{display:flex;}
     .hero-grid,.about-grid,.dist-grid,.contact-grid{grid-template-columns:1fr;}
     .product-grid{grid-template-columns:repeat(2,1fr);}
     .why-grid{grid-template-columns:repeat(2,1fr);}
     .sol-grid{grid-template-columns:repeat(2,1fr);}
-    .sustain-grid{grid-template-columns:repeat(2,1fr);}
+    .trust-grid{grid-template-columns:repeat(2,1fr);}
+    .trust-stats{grid-template-columns:repeat(3,1fr);}
+    .stat-strip{grid-template-columns:repeat(2,1fr);}
     .testi-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr 1fr;row-gap:36px;}
     .distributor{padding:44px 28px;}
+    .mv-grid{grid-template-columns:1fr;}
   }
   @media(max-width:600px){
     .wrap{padding:0 20px;}
     section{padding:70px 0;}
-    .product-grid,.why-grid,.sol-grid,.sustain-grid,.about-cards,.form-row{grid-template-columns:1fr;}
-    .hero{padding:52px 0 20px;}
+    .product-grid,.why-grid,.sol-grid,.trust-grid,.form-row,.stat-strip,.trust-stats{grid-template-columns:1fr;}
+    .hero{padding:56px 0 30px;}
     .hero-ctas{flex-direction:column;align-items:stretch;}
     .footer-grid{grid-template-columns:1fr;}
     .distributor{border-radius:22px;}
+    .topbar .tb-right{display:none;}
   }
 
-  /* mobile menu */
-  .mobile-menu{
-    position:fixed;inset:0;background:var(--navy);z-index:300;
-    display:flex;flex-direction:column;padding:28px 28px;
-    transform:translateX(100%);transition:transform .35s ease;
-  }
+  .mobile-menu{position:fixed;inset:0;background:var(--navy);z-index:300;display:flex;flex-direction:column;padding:28px 28px;transform:translateX(100%);transition:transform .35s ease;}
   .mobile-menu.open{transform:translateX(0);}
   .mobile-menu .close-x{align-self:flex-end;color:#fff;font-size:28px;background:none;border:none;cursor:pointer;}
   .mobile-menu a{color:#fff;font-size:22px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-family:'Bricolage Grotesque',sans-serif;}
@@ -385,14 +278,21 @@
 </head>
 <body>
 
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <a href="mailto:info@exariste.com">info@exariste.com</a>
+      <a href="tel:+8801713366224">+880 1713-366224</a>
+    </div>
+    <div class="tb-right">A HOME CARE BRAND OF EXARISTE GROUP</div>
+  </div>
+</div>
+
 <header>
   <div class="nav">
     <a href="#" class="brand">
       <img src="assets/logo-emblem.png" alt="SparkleX Home Care logo">
-      <div class="brand-text">
-        <b>SPARKLEX</b>
-        <span>Home Care</span>
-      </div>
+      <div class="brand-text"><b>SPARKLEX</b><span>Home Care</span></div>
     </a>
     <nav class="nav-links">
       <a href="#about">About</a>
@@ -403,8 +303,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-right">
-      <div class="lang-switch"><span class="active">EN</span><span>বাংলা</span></div>
-      <a href="#distributor" class="btn btn-primary" style="padding:11px 20px;font-size:13.5px;">Become a Distributor</a>
+      <a href="#distributor" class="btn btn-gold" style="padding:11px 20px;font-size:13.5px;">Become a Distributor</a>
       <button class="burger" id="burgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -420,23 +319,29 @@
   <a href="#contact">Contact</a>
 </div>
 
+<div class="ticker">
+  <div class="ticker-track">
+    <span>🌟 <b>SPARKLEX HOME CARE</b> — a proud brand of EXARISTE GROUP</span>
+    <span>🧼 New: 10X Floor Cleaner now available nationwide</span>
+    <span>🤝 Now recruiting distributors across Bangladesh</span>
+    <span>💧 Purity in Every Wash — 7 product lines and growing</span>
+    <span>🌟 <b>SPARKLEX HOME CARE</b> — a proud brand of EXARISTE GROUP</span>
+    <span>🧼 New: 10X Floor Cleaner now available nationwide</span>
+    <span>🤝 Now recruiting distributors across Bangladesh</span>
+    <span>💧 Purity in Every Wash — 7 product lines and growing</span>
+  </div>
+</div>
+
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <div class="ripple" style="width:520px;height:520px;top:-140px;right:-120px;"></div>
-  <div class="ripple" style="width:340px;height:340px;top:60px;right:20px;border-color:rgba(0,166,81,0.12);"></div>
   <div class="wrap hero-grid">
     <div data-reveal>
-      <div class="eyebrow">A Brand of EXARISTE GROUP</div>
+      <div class="eyebrow">Home Care Division of EXARISTE GROUP</div>
       <h1>Purity in<br><em>Every Wash.</em></h1>
       <p class="lead">Professional home-cleaning solutions engineered for modern Bangladeshi families — powerful on stains, gentle on fabric, safe for every room.</p>
       <div class="hero-ctas">
-        <a href="#products" class="btn btn-primary">Explore Products →</a>
-        <a href="#distributor" class="btn btn-ghost">Become a Distributor</a>
-      </div>
-      <div class="hero-stats">
-        <div><b>7+</b><span>Product lines</span></div>
-        <div><b>99.9%</b><span>Germ elimination*</span></div>
-        <div><b>10X</b><span>Cleaning power*</span></div>
+        <a href="#products" class="btn btn-gold">Explore Products →</a>
+        <a href="#distributor" class="btn btn-outline-light">Become a Distributor</a>
       </div>
     </div>
     <div class="hero-visual" data-reveal>
@@ -448,130 +353,40 @@
       </div>
     </div>
   </div>
+  <div class="wrap">
+    <div class="stat-strip" data-reveal>
+      <div class="stat-item"><b>7+</b><span>Product Lines</span></div>
+      <div class="stat-item"><b>99.9%</b><span>Germ Elimination*</span></div>
+      <div class="stat-item"><b>10X</b><span>Cleaning Power*</span></div>
+      <div class="stat-item"><b>🚀</b><span>Newly Launched</span></div>
+    </div>
+  </div>
 </section>
-<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0,40 C 240,90 480,0 720,30 C 960,60 1200,10 1440,45 L1440,90 L0,90 Z" fill="#ffffff"/></svg>
 
 <!-- ===== ABOUT ===== -->
 <section class="about" id="about">
   <div class="wrap about-grid">
+    <div class="about-frame" data-reveal>
+      <img src="assets/logo-emblem.png" alt="SparkleX Home Care emblem">
+      <div class="quote">"A clean home shouldn't be complicated — <b>purity in every wash.</b>"</div>
+    </div>
     <div data-reveal>
-      <div class="eyebrow">About SparkleX</div>
-      <h2>Built on one idea: <br>a truly clean home shouldn't be complicated.</h2>
-      <p style="margin-top:20px;font-size:15.5px;">SparkleX Home Care began with a simple frustration — everyday cleaning products that promised a lot and delivered little. Today, every bottle we make is formulated to cut grease and grime on contact while staying gentle on hands, fabric, and surfaces, so families across Bangladesh can spend less time cleaning and more time living.</p>
-      <div class="highlight-chips">
-        <div class="chip">Advanced Cleaning Formula</div>
-        <div class="chip">Safe Ingredients</div>
-        <div class="chip">Trusted Quality</div>
-        <div class="chip">Eco-conscious Production</div>
-      </div>
-    </div>
-    <div class="about-cards" data-reveal>
-      <div class="about-card">
-        <div class="icon">◎</div>
-        <h4>Our Mission</h4>
-        <p>To deliver premium, affordable cleaning solutions that make every Bangladeshi home healthier, fresher, and easier to care for.</p>
-      </div>
-      <div class="about-card">
-        <div class="icon">↗</div>
-        <h4>Our Vision</h4>
-        <p>To become South Asia's most trusted home care brand — recognised for uncompromising quality and genuine care for every household.</p>
-      </div>
-      <div class="about-card" style="grid-column:1/-1;">
-        <div class="icon">⬢</div>
-        <h4>Why Families Choose SparkleX</h4>
-        <p>From a lemon-fresh dishwashing liquid to a 10X floor cleaner that kills 99.9% of germs, every product is lab-tested and built for real Bangladeshi households — humidity, hard water, and all.</p>
+      <div class="eyebrow on-light">About SparkleX</div>
+      <h2>Trusted, everyday cleaning — built to an international standard.</h2>
+      <p style="margin-top:18px;font-size:15.5px;">SparkleX Home Care began with a simple frustration — everyday cleaning products that promised a lot and delivered little. Today, every bottle we make is formulated to cut grease and grime on contact while staying gentle on hands, fabric, and surfaces, so families across Bangladesh can spend less time cleaning and more time living.</p>
+      <div class="mv-grid">
+        <div class="mv-card"><div class="ic">🎯</div><h4>Our Mission</h4><p>To deliver premium, affordable cleaning solutions that make every Bangladeshi home healthier and easier to care for.</p></div>
+        <div class="mv-card"><div class="ic">🔭</div><h4>Our Vision</h4><p>To become South Asia's most trusted home care brand, recognised for uncompromising quality and genuine care.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PRODUCTS ===== -->
-<section class="products" id="products">
-  <div class="wrap">
-    <div class="section-head center" data-reveal>
-      <div class="eyebrow" style="justify-content:center;">Product Categories</div>
-      <h2>One brand, every corner of the home.</h2>
-      <p>Laundry, kitchen, bathroom, and surface care — formulated as one connected system of clean.</p>
-    </div>
-    <div class="cat-tabs" data-reveal>
-      <span class="cat-tab">Laundry Care</span>
-      <span class="cat-tab">Kitchen Care</span>
-      <span class="cat-tab">Surface Care</span>
-      <span class="cat-tab">Bathroom Care</span>
-    </div>
-    <div class="product-grid">
-      <div class="product-card" data-reveal>
-        <div class="product-media"><span class="product-tag">Laundry Care</span><img src="assets/product-washing-powder.png" alt="SparkleX Washing Powder"></div>
-        <div class="product-body">
-          <h4>Washing Powder</h4>
-          <p>Deep-cleaning formula that removes tough stains and leaves clothes brighter, with long-lasting freshness.</p>
-          <span class="plink">View details →</span>
-        </div>
-      </div>
-      <div class="product-card" data-reveal>
-        <div class="product-media"><span class="product-tag">Laundry Care</span><img src="assets/product-liquid-detergent.png" alt="SparkleX Liquid Detergent"></div>
-        <div class="product-body">
-          <h4>Liquid Detergent</h4>
-          <p>Smart Clean formula with 2X more cleaning power — tough on stains, gentle on fabrics, fresh long-lasting scent.</p>
-          <span class="plink">View details →</span>
-        </div>
-      </div>
-      <div class="product-card" data-reveal>
-        <div class="product-media"><span class="product-tag">Kitchen Care</span><img src="assets/product-dishwashing-liquid.png" alt="SparkleX Dishwashing Liquid"></div>
-        <div class="product-body">
-          <h4>Dishwashing Liquid</h4>
-          <p>Grease-cutting power with real lemon extracts — gentle on hands, sparkling clean on every dish and glass.</p>
-          <span class="plink">View details →</span>
-        </div>
-      </div>
-      <div class="product-card" data-reveal>
-        <div class="product-media"><span class="product-tag">Kitchen Care</span><img src="assets/product-dishwashing-bar.png" alt="SparkleX Dishwashing Bar"></div>
-        <div class="product-body">
-          <h4>Dishwashing Bar</h4>
-          <p>Powerful grease-cutting bar that's easy to rinse and biodegradable — tough on grease, soft on hands.</p>
-          <span class="plink">View details →</span>
-        </div>
-      </div>
-      <div class="product-card" data-reveal>
-        <div class="product-media"><span class="product-tag">Surface Care</span><img src="assets/product-floor-cleaner.png" alt="SparkleX Floor Cleaner"></div>
-        <div class="product-body">
-          <h4>Floor Cleaner</h4>
-          <p>10X better cleaning, kills 99.9% of germs, with a long-lasting lavender fragrance for a fresher home.</p>
-          <span class="plink">View details →</span>
-        </div>
-      </div>
-      <div class="product-card" data-reveal>
-        <div class="product-media"><span class="product-tag">Surface Care</span><img src="assets/product-glass-cleaner.png" alt="SparkleX Glass Cleaner"></div>
-        <div class="product-body">
-          <h4>Glass Cleaner</h4>
-          <p>Streak-free, crystal-clear shine for windows, mirrors, and auto glass — safe on every glass surface.</p>
-          <span class="plink">View details →</span>
-        </div>
-      </div>
-      <div class="product-card" data-reveal style="grid-column:span 1;">
-        <div class="product-media"><span class="product-tag">Bathroom Care</span><img src="assets/product-toilet-cleaner.png" alt="SparkleX Toilet Cleaner"></div>
-        <div class="product-body">
-          <h4>Toilet Cleaner</h4>
-          <p>10X better cleaning that kills 99.9% of germs and removes tough stains for a hygienic, fresh bathroom.</p>
-          <span class="plink">View details →</span>
-        </div>
-      </div>
-      <div class="product-card" data-reveal style="background:linear-gradient(150deg,var(--blue),var(--blue-deep));display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:30px;">
-        <div>
-          <h4 style="color:#fff;font-size:20px;margin-bottom:10px;">More products coming soon</h4>
-          <p style="color:rgba(255,255,255,0.8);font-size:14px;margin-bottom:18px;">New formulas are always in development at SparkleX Labs.</p>
-          <a href="#contact" class="btn btn-ghost" style="background:#fff;">Get notified</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== WHY ===== -->
+<!-- ===== WHY (dark, numbered) ===== -->
 <section class="why" id="why">
   <div class="wrap">
-    <div class="section-head" data-reveal>
-      <div class="eyebrow">Why SparkleX</div>
+    <div class="section-head center on-dark" data-reveal>
+      <div class="eyebrow" style="justify-content:center;">Why SparkleX</div>
       <h2>Eight reasons families keep coming back.</h2>
     </div>
     <div class="why-grid" data-reveal>
@@ -591,19 +406,108 @@
 <section class="solutions" id="solutions">
   <div class="wrap">
     <div class="section-head center" data-reveal>
-      <div class="eyebrow" style="justify-content:center;">Home Care Solutions</div>
+      <div class="eyebrow on-light" style="justify-content:center;">Home Care Solutions</div>
       <h2>A SparkleX formula for every space.</h2>
       <p>From the laundry room to the boardroom — one system, engineered room by room.</p>
     </div>
     <div class="sol-grid" data-reveal>
-      <div class="sol-tile" style="background:linear-gradient(160deg,#0D6EFD,#0A4FC4);"><span class="ic">🧺</span><h4>Laundry</h4><span>Powder · Liquid</span></div>
-      <div class="sol-tile" style="background:linear-gradient(160deg,#00A651,#037A3C);"><span class="ic">🍽️</span><h4>Kitchen</h4><span>Bar · Liquid</span></div>
-      <div class="sol-tile" style="background:linear-gradient(160deg,#0A4FC4,#08182F);"><span class="ic">🚽</span><h4>Bathroom</h4><span>Toilet Cleaner</span></div>
-      <div class="sol-tile" style="background:linear-gradient(160deg,#7C5CFF,#4A32B0);"><span class="ic">🛋️</span><h4>Living Room</h4><span>Surface Care</span></div>
-      <div class="sol-tile" style="background:linear-gradient(160deg,#00C4CC,#0891A8);"><span class="ic">🪟</span><h4>Glass</h4><span>Streak-Free Shine</span></div>
-      <div class="sol-tile" style="background:linear-gradient(160deg,#8B5CF6,#5B3FA8);"><span class="ic">◻️</span><h4>Tiles</h4><span>Floor Cleaner</span></div>
-      <div class="sol-tile" style="background:linear-gradient(160deg,#0D6EFD,#00A651);"><span class="ic">🏢</span><h4>Office</h4><span>Bulk Solutions</span></div>
-      <div class="sol-tile" style="background:linear-gradient(160deg,#08182F,#0A4FC4);"><span class="ic">🏭</span><h4>Commercial</h4><span>Industrial Scale</span></div>
+      <div class="sol-item"><div class="ic">🧺</div><h4>Laundry</h4><span>POWDER · LIQUID</span></div>
+      <div class="sol-item"><div class="ic">🍽</div><h4>Kitchen</h4><span>BAR · LIQUID</span></div>
+      <div class="sol-item"><div class="ic">🚽</div><h4>Bathroom</h4><span>TOILET CLEANER</span></div>
+      <div class="sol-item"><div class="ic">🛋</div><h4>Living Room</h4><span>SURFACE CARE</span></div>
+      <div class="sol-item"><div class="ic">🪟</div><h4>Glass</h4><span>STREAK-FREE SHINE</span></div>
+      <div class="sol-item"><div class="ic">◻️</div><h4>Tiles</h4><span>FLOOR CLEANER</span></div>
+      <div class="sol-item"><div class="ic">🏢</div><h4>Office</h4><span>BULK SOLUTIONS</span></div>
+      <div class="sol-item"><div class="ic">🏭</div><h4>Commercial</h4><span>INDUSTRIAL SCALE</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="section-head center" data-reveal>
+      <div class="eyebrow on-light" style="justify-content:center;">Our Portfolio</div>
+      <h2>Seven products built on trust, quality, and clean.</h2>
+      <p>Laundry, kitchen, bathroom, and surface care — one connected system of clean.</p>
+    </div>
+    <div class="cat-tabs" data-reveal>
+      <span class="cat-tab">Laundry Care</span>
+      <span class="cat-tab">Kitchen Care</span>
+      <span class="cat-tab">Surface Care</span>
+      <span class="cat-tab">Bathroom Care</span>
+    </div>
+    <div class="product-grid">
+      <div class="product-card" data-reveal>
+        <div class="product-media"><span class="product-tag">Laundry Care</span><img src="assets/product-washing-powder.png" alt="SparkleX Washing Powder"></div>
+        <div class="product-body">
+          <h4>Washing Powder</h4>
+          <div class="tagline">"Deep Clean, Brighter Finish"</div>
+          <p>Removes tough stains and leaves clothes brighter, with long-lasting freshness.</p>
+          <span class="plink">View Product →</span>
+        </div>
+      </div>
+      <div class="product-card" data-reveal>
+        <div class="product-media"><span class="product-tag">Laundry Care</span><img src="assets/product-liquid-detergent.png" alt="SparkleX Liquid Detergent"></div>
+        <div class="product-body">
+          <h4>Liquid Detergent</h4>
+          <div class="tagline">"Smart Clean for Everyday Care"</div>
+          <p>2X more cleaning power — tough on stains, gentle on fabrics, fresh long-lasting scent.</p>
+          <span class="plink">View Product →</span>
+        </div>
+      </div>
+      <div class="product-card" data-reveal>
+        <div class="product-media"><span class="product-tag">Kitchen Care</span><img src="assets/product-dishwashing-liquid.png" alt="SparkleX Dishwashing Liquid"></div>
+        <div class="product-body">
+          <h4>Dishwashing Liquid</h4>
+          <div class="tagline">"Grease Cutting Power"</div>
+          <p>Real lemon extracts — gentle on hands, sparkling clean on every dish and glass.</p>
+          <span class="plink">View Product →</span>
+        </div>
+      </div>
+      <div class="product-card" data-reveal>
+        <div class="product-media"><span class="product-tag">Kitchen Care</span><img src="assets/product-dishwashing-bar.png" alt="SparkleX Dishwashing Bar"></div>
+        <div class="product-body">
+          <h4>Dishwashing Bar</h4>
+          <div class="tagline">"Tough on Grease, Soft on Hands"</div>
+          <p>Powerful grease-cutting bar that's easy to rinse and biodegradable.</p>
+          <span class="plink">View Product →</span>
+        </div>
+      </div>
+      <div class="product-card" data-reveal>
+        <div class="product-media"><span class="product-tag">Surface Care</span><img src="assets/product-floor-cleaner.png" alt="SparkleX Floor Cleaner"></div>
+        <div class="product-body">
+          <h4>Floor Cleaner</h4>
+          <div class="tagline">"Spotless Floors, Fresher Home"</div>
+          <p>10X better cleaning, kills 99.9% of germs, with long-lasting lavender fragrance.</p>
+          <span class="plink">View Product →</span>
+        </div>
+      </div>
+      <div class="product-card" data-reveal>
+        <div class="product-media"><span class="product-tag">Surface Care</span><img src="assets/product-glass-cleaner.png" alt="SparkleX Glass Cleaner"></div>
+        <div class="product-body">
+          <h4>Glass Cleaner</h4>
+          <div class="tagline">"Crystal Clear Shine"</div>
+          <p>Streak-free shine for windows, mirrors, and auto glass — safe on every surface.</p>
+          <span class="plink">View Product →</span>
+        </div>
+      </div>
+      <div class="product-card" data-reveal>
+        <div class="product-media"><span class="product-tag">Bathroom Care</span><img src="assets/product-toilet-cleaner.png" alt="SparkleX Toilet Cleaner"></div>
+        <div class="product-body">
+          <h4>Toilet Cleaner</h4>
+          <div class="tagline">"Powerful Clean, Hygienic Fresh"</div>
+          <p>10X better cleaning that kills 99.9% of germs and removes tough stains.</p>
+          <span class="plink">View Product →</span>
+        </div>
+      </div>
+      <div class="product-card" data-reveal style="background:linear-gradient(150deg,var(--navy),var(--navy-3));display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:30px;">
+        <div>
+          <h4 style="color:#fff;font-size:20px;margin-bottom:10px;">More products coming soon</h4>
+          <p style="color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:18px;">New formulas are always in development at SparkleX Labs.</p>
+          <a href="#contact" class="btn btn-gold">Get notified</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -614,9 +518,9 @@
     <div class="distributor" data-reveal>
       <div class="dist-grid">
         <div>
-          <div class="eyebrow" style="color:var(--aqua);">Distributor Program</div>
-          <h2>Bring SparkleX to your district.</h2>
-          <p style="margin-top:14px;max-width:480px;">We're expanding across Bangladesh and are looking for committed partners — from local dealers to nationwide distributors — to grow with us.</p>
+          <div class="eyebrow">Distributor Program</div>
+          <h2 style="color:#fff;">Bring SparkleX to your district.</h2>
+          <p style="margin-top:14px;max-width:480px;color:rgba(255,255,255,0.62);">We're expanding across Bangladesh and are looking for committed partners — from local dealers to nationwide distributors — to grow with us.</p>
           <div class="dist-benefits">
             <div class="dist-benefit"><span class="gd">◆</span>Competitive margins &amp; volume pricing</div>
             <div class="dist-benefit"><span class="gd">◆</span>Marketing &amp; POS material support</div>
@@ -627,8 +531,8 @@
         <div class="dist-card">
           <h3>Apply to become a dealer</h3>
           <p class="small">Tell us about your business and territory — our team responds within 2 business days.</p>
-          <a href="#contact" class="btn btn-primary">Start Application</a>
-          <a href="#" class="btn btn-gold" style="width:100%;margin-top:10px;justify-content:center;">Download Catalogue (PDF)</a>
+          <a href="#contact" class="btn btn-gold">Start Application</a>
+          <a href="#" class="btn btn-outline-light" style="width:100%;margin-top:10px;justify-content:center;">Download Catalogue (PDF)</a>
         </div>
       </div>
     </div>
@@ -639,32 +543,39 @@
 <section class="clients">
   <div class="wrap">
     <div class="section-head center" data-reveal>
-      <div class="eyebrow" style="justify-content:center;">Corporate Clients</div>
+      <div class="eyebrow on-light" style="justify-content:center;">Corporate Clients</div>
       <h2>Trusted by businesses that can't compromise on clean.</h2>
     </div>
     <div class="client-row" data-reveal>
       <div class="client-pill"><span class="ic">🏨</span>Hotels</div>
       <div class="client-pill"><span class="ic">🏥</span>Hospitals</div>
       <div class="client-pill"><span class="ic">🏫</span>Schools</div>
-      <div class="client-pill"><span class="ic">🍽️</span>Restaurants</div>
+      <div class="client-pill"><span class="ic">🍽</span>Restaurants</div>
       <div class="client-pill"><span class="ic">🏢</span>Offices</div>
       <div class="client-pill"><span class="ic">🏭</span>Industries</div>
     </div>
   </div>
 </section>
 
-<!-- ===== SUSTAINABILITY ===== -->
-<section class="sustain">
+<!-- ===== TRUST ===== -->
+<section class="trust">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <div class="eyebrow">Sustainability</div>
-      <h2>Clean homes shouldn't cost the planet.</h2>
+      <div class="eyebrow on-light">Built on Trust</div>
+      <h2>The principles behind every bottle.</h2>
     </div>
-    <div class="sustain-grid" data-reveal>
-      <div class="sustain-item"><div class="ic">📦</div><h4>Eco Packaging</h4><p>Recyclable bottles and reduced-plastic packaging across our range.</p></div>
-      <div class="sustain-item"><div class="ic">💧</div><h4>Water Saving</h4><p>Concentrated formulas that use less water and less product per wash.</p></div>
-      <div class="sustain-item"><div class="ic">🏭</div><h4>Responsible Manufacturing</h4><p>Locally produced in Kushtia under strict quality and safety controls.</p></div>
-      <div class="sustain-item"><div class="ic">🧪</div><h4>Safe Formula</h4><p>Dermatologically tested ingredients, safe for homes with children and pets.</p></div>
+    <div class="trust-grid" data-reveal>
+      <div class="trust-item"><div class="ic">🏭</div><h4>Locally Manufactured</h4><p>Produced in Kushtia, Bangladesh, under strict quality control.</p></div>
+      <div class="trust-item"><div class="ic">🧪</div><h4>Quality &amp; Safety Tested</h4><p>Dermatologically tested formulas, safe for family use.</p></div>
+      <div class="trust-item"><div class="ic">🌱</div><h4>Sustainable Practices</h4><p>Concentrated, biodegradable formulas and responsible packaging.</p></div>
+      <div class="trust-item"><div class="ic">🤝</div><h4>Distributor Support</h4><p>Dedicated onboarding, marketing material, and supply reliability.</p></div>
+    </div>
+    <div class="trust-stats" data-reveal>
+      <div><b>7+</b><span>Products</span></div>
+      <div><b>4</b><span>Categories</span></div>
+      <div><b>100%</b><span>Family Safe</span></div>
+      <div><b>🚀</b><span>Newly Launched</span></div>
+      <div><b>∞</b><span>Vision &amp; Ambition</span></div>
     </div>
   </div>
 </section>
@@ -673,7 +584,7 @@
 <section class="testi">
   <div class="wrap">
     <div class="section-head center" data-reveal>
-      <div class="eyebrow" style="justify-content:center;">Customer Reviews</div>
+      <div class="eyebrow on-light" style="justify-content:center;">Customer Reviews</div>
       <h2>What households and businesses say.</h2>
     </div>
     <div class="testi-grid" data-reveal>
@@ -684,7 +595,7 @@
       </div>
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p>"We switched our entire hotel housekeeping supply to SparkleX. Consistent quality and the distributor support has been excellent."</p>
+        <p>"We switched our entire hotel housekeeping supply to SparkleX. Consistent quality and excellent distributor support."</p>
         <div class="testi-person"><div class="avatar">M</div><div><b>Md. Faisal Hossain</b><span>Facilities Manager, Hotel Client</span></div></div>
       </div>
       <div class="testi-card">
@@ -700,7 +611,7 @@
 <section class="faq">
   <div class="wrap">
     <div class="section-head center" data-reveal>
-      <div class="eyebrow" style="justify-content:center;">FAQ</div>
+      <div class="eyebrow on-light" style="justify-content:center;">FAQ</div>
       <h2>Common questions</h2>
     </div>
     <div class="faq-list" data-reveal>
@@ -736,7 +647,7 @@
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <div class="eyebrow">Contact</div>
+      <div class="eyebrow on-light">Contact</div>
       <h2>Let's talk clean.</h2>
       <p>Questions about a product, bulk orders, or becoming a distributor? Reach out — we usually reply within a business day.</p>
     </div>
@@ -757,7 +668,7 @@
         </div>
         <input type="email" placeholder="Email address" required>
         <textarea placeholder="How can we help?" required></textarea>
-        <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Send Message</button>
+        <button type="submit" class="btn btn-gold" style="align-self:flex-start;">Send Message</button>
         <p class="sent-msg" style="display:none;color:var(--green);font-size:13.5px;">Thanks — your message has been noted. This is a demo form; connect a backend to receive live submissions.</p>
       </form>
     </div>
@@ -776,10 +687,10 @@
         <p>An innovative home care brand delivering premium cleaning solutions for modern homes with superior performance, safety, and trusted quality.</p>
         <div class="of-badge">Proudly a Brand of EXARISTE GROUP</div>
         <div class="social-row">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="X / Twitter">X</a>
-          <a href="#" aria-label="YouTube">▶</a>
+          <a href="https://www.facebook.com/EXARISTEGROUP" aria-label="Facebook">f</a>
+          <a href="https://www.linkedin.com/company/exariste-group" aria-label="LinkedIn">in</a>
+          <a href="https://x.com/EXARISTEGROUP" aria-label="X / Twitter">X</a>
+          <a href="https://www.youtube.com/@EXARISTEGROUP" aria-label="YouTube">▶</a>
         </div>
       </div>
       <div>
@@ -803,6 +714,7 @@
           <li><a href="#why">Why SparkleX</a></li>
           <li><a href="#distributor">Become a Distributor</a></li>
           <li><a href="#contact">Contact Us</a></li>
+          <li><a href="https://exariste.com" target="_blank" rel="noopener">EXARISTE GROUP →</a></li>
         </ul>
       </div>
       <div>
@@ -829,7 +741,6 @@
 </footer>
 
 <script>
-  // mobile menu
   const burger = document.getElementById('burgerBtn');
   const menu = document.getElementById('mobileMenu');
   const closeMenu = document.getElementById('closeMenu');
@@ -837,7 +748,6 @@
   closeMenu.addEventListener('click', () => menu.classList.remove('open'));
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
 
-  // scroll reveal
   const revealEls = document.querySelectorAll('[data-reveal]');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
