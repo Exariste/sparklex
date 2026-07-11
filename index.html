@@ -153,7 +153,9 @@
   .section-head p{color:#5b667a; font-size:1.05rem; line-height:1.65;}
 
   /* ---------- STORY / TIMELINE ---------- */
-  .story{background:var(--surface); padding:110px 0 100px;}
+  .story{background:linear-gradient(160deg,#fdfbf3 0%, #f7fbff 55%, #eefcf5 100%); padding:110px 0 100px; position:relative; overflow:hidden;}
+  .story::before{content:""; position:absolute; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(212,175,55,.16), transparent 70%); top:-160px; right:-120px; pointer-events:none;}
+  .story::after{content:""; position:absolute; width:360px; height:360px; border-radius:50%; background:radial-gradient(circle, rgba(0,166,81,.14), transparent 70%); bottom:-140px; left:-100px; pointer-events:none;}
   .timeline{display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative; margin-top:30px;}
   .timeline::before{content:""; position:absolute; top:26px; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--blue),var(--aqua),var(--green),var(--gold)); opacity:.35;}
   .t-item{position:relative; padding-top:70px; text-align:center;}
@@ -193,7 +195,8 @@
   .p-compare:hover{border-color:var(--blue) !important; color:var(--blue);}
 
   /* ---------- WHY ---------- */
-  .why{background:var(--surface); padding:110px 0;}
+  .why{background:linear-gradient(160deg,#eef7ff 0%, #ffffff 45%, #f2fbff 100%); padding:110px 0; position:relative; overflow:hidden;}
+  .why::before{content:""; position:absolute; width:400px; height:400px; border-radius:50%; background:radial-gradient(circle, rgba(0,196,204,.14), transparent 70%); top:-150px; left:-120px; pointer-events:none;}
   .why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
   .why-card{
     padding:30px 22px; border-radius:var(--radius); background:var(--bg); text-align:center;
@@ -235,7 +238,8 @@
   .sustain-item span{font-size:13px; color:#4b5768; font-weight:500;}
 
   /* ---------- ACADEMY ---------- */
-  .academy{background:var(--surface); padding:110px 0;}
+  .academy{background:linear-gradient(160deg,#f6fff9 0%, #ffffff 50%, #fffdf5 100%); padding:110px 0; position:relative; overflow:hidden;}
+  .academy::before{content:""; position:absolute; width:380px; height:380px; border-radius:50%; background:radial-gradient(circle, rgba(0,166,81,.13), transparent 70%); top:-140px; right:-100px; pointer-events:none;}
   .academy-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
   .a-card{border-radius:var(--radius); overflow:hidden; background:var(--bg); border:1px solid #eef1f6; transition:transform .35s ease, box-shadow .35s ease;}
   .a-card:hover{transform:translateY(-6px); box-shadow:0 20px 40px -20px rgba(13,110,253,.3);}
@@ -268,7 +272,8 @@
   .calc-result span{font-size:12px; color:#c9d6ea;}
 
   /* ---------- CORPORATE ---------- */
-  .corporate{background:var(--surface); padding:90px 0;}
+  .corporate{background:linear-gradient(160deg,#eef4ff 0%, #ffffff 55%, #eefcff 100%); padding:90px 0; position:relative; overflow:hidden;}
+  .corporate::before{content:""; position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, rgba(13,110,253,.12), transparent 70%); bottom:-120px; right:-90px; pointer-events:none;}
   .corp-strip{display:grid; grid-template-columns:repeat(6,1fr); gap:16px; margin-top:36px;}
   .corp-item{padding:24px 12px; text-align:center; border-radius:14px; background:var(--bg); border:1px solid #eef1f6; font-size:13.5px; font-weight:600; color:#405071; transition:.3s;}
   .corp-item:hover{background:var(--blue); color:#fff; transform:translateY(-4px);}
@@ -287,7 +292,8 @@
   .testi-dots span.active{background:var(--blue); width:22px; border-radius:5px;}
 
   /* ---------- FAQ ---------- */
-  .faq{background:var(--surface); padding:110px 0;}
+  .faq{background:linear-gradient(160deg,#fffdf5 0%, #ffffff 50%, #f6fbff 100%); padding:110px 0; position:relative; overflow:hidden;}
+  .faq::before{content:""; position:absolute; width:360px; height:360px; border-radius:50%; background:radial-gradient(circle, rgba(212,175,55,.12), transparent 70%); top:-130px; left:-100px; pointer-events:none;}
   .faq-wrap{max-width:780px; margin:0 auto;}
   .faq-item{border-bottom:1px solid #e8edf5;}
   .faq-q{display:flex; justify-content:space-between; align-items:center; padding:22px 4px; cursor:pointer; font-weight:600; font-size:15.5px;}
