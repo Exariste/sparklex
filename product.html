@@ -177,6 +177,7 @@
           <b id="omTotal">৳0</b>
         </div>
         <button type="submit" class="btn btn-primary">Confirm Order</button>
+        <div id="omFormMsg" class="form-msg" style="display:none;"></div>
       </form>
     </div>
 
@@ -262,6 +263,8 @@
     orderModal.classList.add('open');
     orderFormWrap.style.display = 'block';
     orderSuccessWrap.style.display = 'none';
+    const omFormMsg = document.getElementById('omFormMsg');
+    if (omFormMsg) omFormMsg.style.display = 'none';
     updateTotal();
     document.body.style.overflow = 'hidden';
   }
@@ -323,7 +326,12 @@
       orderForm.reset();
       omQty.value = 1;
     } catch (err) {
-      alert('Sorry, your order could not be sent right now. Please try again, or contact us directly on WhatsApp.');
+      const omFormMsg = document.getElementById('omFormMsg');
+      if (omFormMsg) {
+        omFormMsg.textContent = 'Sorry, your order could not be sent right now. Please try again, or contact us directly on WhatsApp.';
+        omFormMsg.className = 'form-msg error';
+        omFormMsg.style.display = 'block';
+      }
     } finally {
       orderSubmitBtn.disabled = false;
       orderSubmitBtn.textContent = originalBtnText;
