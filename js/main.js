@@ -153,6 +153,15 @@ if (unitsRange && marginRange && unitsVal && marginVal && calcResult) {
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   const cfBtn = contactForm.querySelector('button[type="submit"]');
+  const cfMsg = document.getElementById('cfMsg');
+
+  function showFormMsg(text, type) {
+    if (!cfMsg) return;
+    cfMsg.textContent = text;
+    cfMsg.className = 'form-msg ' + type;
+    cfMsg.style.display = 'block';
+  }
+
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = document.getElementById('cfName').value.trim();
@@ -163,6 +172,7 @@ if (contactForm) {
     const originalText = cfBtn.textContent;
     cfBtn.disabled = true;
     cfBtn.textContent = 'Sending…';
+    if (cfMsg) cfMsg.style.display = 'none';
 
     try {
       const res = await fetch('https://formsubmit.co/ajax/info@exariste.com', {
@@ -177,10 +187,10 @@ if (contactForm) {
         })
       });
       if (!res.ok) throw new Error('Request failed');
-      alert('Thanks, ' + name + '! Your message has been sent — we\'ll get back to you soon.');
+      showFormMsg('Thanks, ' + name + '! Your message has been sent — we\'ll get back to you soon.', 'success');
       contactForm.reset();
     } catch (err) {
-      alert('Sorry, your message could not be sent right now. Please try again or email us directly at info@exariste.com.');
+      showFormMsg('Sorry, your message could not be sent right now. Please try again or email us directly at info@exariste.com.', 'error');
     } finally {
       cfBtn.disabled = false;
       cfBtn.textContent = originalText;
