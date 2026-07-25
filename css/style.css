@@ -528,3 +528,8 @@
   .om-msg-box p:last-child{margin-bottom:0;}
   .om-msg-box p span, .om-msg-box p b{color:var(--blue);}
   .om-success .om-id{display:inline-block; margin:0 0 22px; padding:8px 18px; border-radius:100px; background:rgba(13,110,253,.12); border:1px solid rgba(13,110,253,.35); color:var(--blue); font-weight:700; font-size:13.5px; letter-spacing:.04em;}
+
+  /* ================= GENERIC INLINE FORM MESSAGE ================= */
+  .form-msg{border-radius:12px; padding:16px 18px; margin-top:16px; font-size:14px; font-weight:600; line-height:1.6; text-align:left;}
+  .form-msg.success{background:rgba(13,110,253,.1); border:1px solid rgba(13,110,253,.4); color:var(--blue);}
+  .form-msg.error{background:rgba(220,53,69,.1); border:1px solid rgba(220,53,69,.4); color:#ff7b8a;}
